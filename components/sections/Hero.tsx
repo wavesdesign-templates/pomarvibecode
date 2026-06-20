@@ -37,6 +37,31 @@ export function Hero() {
             Our story
           </Button>
         </div>
+
+        {/* Social proof */}
+        <div className="mt-10 flex items-center gap-4">
+          <div className="flex -space-x-3">
+            {[
+              "/images/team/pro-1.png",
+              "/images/team/pro-2.png",
+              "/images/team/pro-0.png",
+              "/images/team/elegant.png",
+              "/images/team/pro-3.png",
+            ].map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                aria-hidden
+                className="h-11 w-11 rounded-full border-2 border-cream/80 object-cover"
+              />
+            ))}
+          </div>
+          <p className="text-sm leading-snug text-cream/80">
+            <span className="font-medium text-cream">Trusted by 10,000+</span>
+            <br className="hidden sm:block" /> customers across the Algarve
+          </p>
+        </div>
       </div>
     </section>
   );
