@@ -20,7 +20,7 @@ export function Hero() {
         </p>
 
         <h1 className="display max-w-[14ch] text-cream text-[clamp(3.25rem,9vw,7.5rem)]">
-          {brand.tagline}
+          Your farming supply
         </h1>
 
         <p className="mt-7 max-w-[46ch] text-lg leading-relaxed text-cream/85 md:text-xl">
