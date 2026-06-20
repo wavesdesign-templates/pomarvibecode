@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* ── Pomar — Franco design system (BYQ Supply) ───────────────────────── */
+@theme {
+  /* Colors — cream + forest green + linen, no third hue */
+  --color-cream: #f9f5eb;       /* primary canvas */
+  --color-forest: #16231b;      /* ink & deep canvas */
+  --color-linen: #ece7d9;       /* lifted surface */
+  --color-moss-veil: #16231b29; /* hairline on cream */
+  --color-fog-line: #ffffff29;  /* hairline on forest */
+  --color-morning-haze: #ffffff99;
+  --color-shaded-grove: #16231b99;
+
+  /* Type — Instrument Serif (display) · Inter (body) · DM Mono (labels) */
+  --font-serif: var(--font-instrument), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-dmmono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Soft card lift */
+  --shadow-card-soft: 0 2px 30px rgba(119, 119, 119, 0.06);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-forest);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background-color: var(--color-forest);
+    color: var(--color-cream);
+  }
+}
+
+@layer components {
+  /* Uppercase mono eyebrow label — the brand's quiet wayfinder */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  /* Romantic, slightly compressed display serif */
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.92;
+  }
+  .serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+}
